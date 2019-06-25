@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <title>Giphy api</title>
+</head>
+<body>
+
+<!-- Rendered Buttons will get Dumped Here  -->
+<div id="buttonLocal"></div>
+<!-- <button data-car = "toyota">Toyota</button>
+<button data-car = "bmw">BMW</button>
+<button data-car = "porsche">Porsche</button>
+<button data-car = "rolls+royce">Rolls Royce</button>
+<button data-car = "aston+martin">Aston Martin</button>
+<button data-car = "mclaren">McLaren</button>
+<button data-car = "lamborghini">Lamborghini</button>
+<button data-car = "lexus">Lexus</button>
+<button data-car = "nissan">Nissan</button>
+<button data-car = "mercedes+benz">Mercedes Benz</button> -->
+
+
+<form id="carForm">
+    <label for="carInput">Type a car brand</label>
+    <input type="text" id="carInput">
+    <br>
+
+    <!-- Button triggers new car to be added -->
+    <input id="addCar" type="submit" value="Pick a set of wheels">
+</form>
+
+<!-- cargif here -->
+<div id="carGifGalore"></div>
+
+
+
+<script type="text/javascript">
+// var topics = ["Toyota","Porsche","BMW","Rolls Royce","Aston Martin","McLaren","Lamborghini","Lexus","Nissan","Mercedes Benz"];
+// console.log(topics)
+
+ 
+// function displayCar() {
+   
+//       var kars2 = $(this).attr("data-name");
+
+//       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + kars2 + "&api_key=ezMnHKSFFs4U8kLi7B08wLgCvit2m1gV&limit=10";
+
+//       $.ajax({
+//         url: queryURL,
+//         method: "GET"
+//       })
+//         .then(function(response) {
+//             console.log(response)
+
+//           var results = response.data;
+//           console.log(results)//nothing happens again
+
+//           for (var i = 0; i < results.length; i++) {
+//             var carDiv = $("<div>");
+//                 var p = $("<p>").text("Rating: " + results[i].rating);
+//                     var carImage = $("<img>");
+            
+//             carImage.attr("src", results[i].images.fixed_height_still.url);
+//             carImage.attr("data-still", results[i].images.fixed_height_still.url);
+//             carImage.attr("data-animate", results[i].images.fixed_height.url);
+//             carImage.attr("data-state", "still");
+//             carImage.addClass("carloope");
+            
+//             carDiv.append(p);
+//             carDiv.append(carImage);
+
+//             $("#carGifGalore").prepend(carDiv);
+//           }
+
+//           $(".carloope").on("click", function(){
+//               var state = $(this).attr("data-state");
+//               if (state === "still") {
+//                     $(this).attr("src", $(this).attr("data-animate"));
+//                     $(this).attr("data-state", "animate");
+//                 } 
+//                 else {
+//                     $(this).attr("src", $(this).attr("data-still"));
+//                     $(this).attr("data-state", "still");
+//                 }
+//           })
+
+//         });
+//         function createMoreButtons(){
+//              $("#buttonLocal").empty();
+
+//             for (var i = 0; i < topics.length; i++){
+//                 var clickable = $("<button>");
+//                     clickable.text(topics[i]);
+//                     clickable.addclass(clickAButton);
+//                     clickable.attr("data-name",topics[i]);
+//                     $(buttonLocal).append(clickable)
+//                 }
+//             }
+//             $("#addcar").on("click", function (event){
+//                 event.preventDefault();
+
+//                 var carBrand = $("#carInput").val().trim();
+
+//                 topics.push(carBrand);
+//                 console.log(topics)
+//                 createMoreButtons();
+//             });
+//             $(document).on("click", ".clickAButton", displayCar);
+//             createMoreButtons();
+//     };
+
+</script>
+
+
+
+
+<script src ="assets/javascript/javascript.js"></script>
+</body>
+</html>
